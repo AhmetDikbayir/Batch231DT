@@ -69,7 +69,7 @@ public class Lambda06 {
 
     //minimum 3. yol
     public static void minimum3(List<Integer> nums){
-        int min = nums.stream().distinct().sorted().reduce(nums.get(0), (t,u) -> t<u ? t : u);
+        int min = nums.stream().distinct().sorted().reduce((t,u) -> t).get();
         System.out.println(min);
     }
 }

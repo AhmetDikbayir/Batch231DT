@@ -12,9 +12,10 @@ public class Lambda06 {
         //maksimum2(nums);
         //maksimum3(nums);
         //maksimum4(nums);
-        minimum1(nums);
+        //minimum1(nums);
+        minimum2(nums);
 
-    } //main disi
+    }
 
     //1)Verilen List'teki "maksimum değeri" bulmak için bir method oluşturun
 
@@ -53,8 +54,15 @@ public class Lambda06 {
         System.out.println(max);
     }
 
+    //minumum 1. yol
     public  static void minimum1(List<Integer> nums ){
-        int max = nums.stream().distinct().reduce(Integer.MAX_VALUE, (t,u) -> t<u ? t : u);
-        System.out.println(max);
+        int min = nums.stream().distinct().reduce(Integer.MAX_VALUE, (t,u) -> t<u ? t : u);
+        System.out.println(min);
+    }
+
+    //minimum 2.yol
+    public static void minimum2(List<Integer> nums){
+        int min = nums.stream().distinct().reduce(nums.get(0), (t,u) -> t<u ? t : u);
+        System.out.println(min);
     }
 }

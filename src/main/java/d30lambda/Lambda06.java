@@ -21,7 +21,7 @@ public class Lambda06 {
     //Integer.MIN_VALUE: Bu, int tipinin alabileceği en küçük değeri verir (-2^31 dir)
 
     public static void maksimum1(List<Integer> nums) {
-//2, 2, 4, 5, 11, 10
+        //2, 2, 4, 5, 11, 10
         int max = nums.stream().distinct().reduce(Integer.MIN_VALUE, (t, u) -> t > u ? t : u);
         System.out.println(max); //11
 

@@ -2,6 +2,7 @@ package d30lambda;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 
 public class Lambda06 {
@@ -16,7 +17,8 @@ public class Lambda06 {
         //minimum2(nums);
         //minimum3(nums);
         //minimum4(nums);
-        minimum5(nums);
+        //minimum5(nums);
+        //minimum6(nums);
     }
 
     //1)Verilen List'teki "maksimum değeri" bulmak için bir method oluşturun
@@ -109,6 +111,15 @@ public class Lambda06 {
         Integer min = nums.
                     stream().
                     reduce((t,u) ->t>u ? u : t).get();
+        System.out.println(min);
+    }
+
+    public static void minimum6(List<Integer> nums){
+        Integer min = nums.
+                stream().
+                distinct().
+                sorted(Comparator.reverseOrder()).
+                reduce((t,u) ->u).get();
         System.out.println(min);
     }
 }

@@ -32,7 +32,7 @@ public class Lambda09 {
     public static void eHaric(List<String>myList){
         myList.
                 stream().
-                filter(t->!t.startsWith("E")).
+                filter(t->!t.toLowerCase().startsWith("E")).
                 forEach(t-> System.out.println(t + " "));
 
     }

@@ -7,17 +7,21 @@ import java.util.Optional;
 
 public class Deneme {
     public static void main(String[] args) {
-        List<Integer> nums = new ArrayList<>(Arrays.asList(2, 2, 4, 5, 11, 10));
-        maksimum4(nums);
-        
+        List<String> myList = new ArrayList<>();
+        myList.add("Ali");
+        myList.add("Elif");
+        myList.add("Yusuf");
+        myList.add("Elif");
+        myList.add("Zeynep");
+        myList.add("Mustafa");
 
+        eHaric(myList);
     }
 
-    public static void maksimum4(List<Integer> nums){
-
-        Integer max = nums.stream().distinct().reduce(Math::min).get();
-        System.out.println(max);
+    public static void eHaric(List<String> myList){
+        myList.stream().filter(t->!t.toLowerCase().startsWith("e")).forEach(t-> System.out.println(t));
     }
+
 
 
 

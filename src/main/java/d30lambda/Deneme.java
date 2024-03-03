@@ -8,14 +8,14 @@ import java.util.Optional;
 public class Deneme {
     public static void main(String[] args) {
         List<Integer> nums = new ArrayList<>(Arrays.asList(2, 2, 4, 5, 11, 10));
-        maksimum3(nums);
+        maksimum4(nums);
         
 
     }
 
-    public static void maksimum3(List<Integer> nums){
+    public static void maksimum4(List<Integer> nums){
 
-        Integer max = nums.stream().distinct().sorted().reduce((t, u)->u).get();
+        Integer max = nums.stream().distinct().reduce(Math::min).get();
         System.out.println(max);
     }
 

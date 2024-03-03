@@ -11,7 +11,8 @@ public class Lambda06 {
         //maksimum1(nums);
         //maksimum2(nums);
         //maksimum3(nums);
-        maksimum4(nums);
+        //maksimum4(nums);
+        minimum1(nums);
 
     } //main disi
 
@@ -52,5 +53,8 @@ public class Lambda06 {
         System.out.println(max);
     }
 
-
+    public  static void minimum1(List<Integer> nums ){
+        int max = nums.stream().distinct().reduce(Integer.MAX_VALUE, (t,u) -> t<u ? t : u);
+        System.out.println(max);
+    }
 }

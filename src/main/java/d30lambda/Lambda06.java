@@ -16,6 +16,7 @@ public class Lambda06 {
         //minimum2(nums);
         //minimum3(nums);
         //minimum4(nums);
+        minimum5(nums);
     }
 
     //1)Verilen List'teki "maksimum değeri" bulmak için bir method oluşturun
@@ -25,7 +26,10 @@ public class Lambda06 {
 
     public static void maksimum1(List<Integer> nums) {
         //2, 2, 4, 5, 11, 10
-        int max = nums.stream().distinct().reduce(Integer.MIN_VALUE, (t, u) -> t > u ? t : u);
+        int max = nums.
+                stream().
+                distinct().
+                reduce(Integer.MIN_VALUE, (t, u) -> t > u ? t : u);
         System.out.println(max); //11
 
     }
@@ -33,7 +37,10 @@ public class Lambda06 {
     //2.yol:
     public static void maksimum2(List<Integer> nums) {
 
-        int max = nums.stream().distinct().reduce(nums.get(0), (t, u) -> t > u ? t : u);
+        int max = nums.
+                stream().
+                distinct().
+                reduce(nums.get(0), (t, u) -> t > u ? t : u);
         System.out.println(max);
 
     }
@@ -43,7 +50,11 @@ public class Lambda06 {
     public static void maksimum3(List<Integer> nums) {
 
 //2, 2, 4, 5, 11, 10
-        Integer max = nums.stream().distinct().sorted().reduce((t, u) -> u).get();
+        Integer max = nums.
+                stream().
+                distinct().
+                sorted().
+                reduce((t, u) -> u).get();
 
         System.out.println(max);
 
@@ -51,30 +62,53 @@ public class Lambda06 {
 
     //4.yol:
     public static void maksimum4(List<Integer> nums){
-        Integer max = nums.stream().distinct().reduce(Math::max).get();
+        Integer max = nums.
+                stream().
+                distinct().
+                reduce(Math::max).get();
         System.out.println(max);
     }
 
     //minumum 1. yol
     public  static void minimum1(List<Integer> nums ){
-        int min = nums.stream().distinct().reduce(Integer.MAX_VALUE, (t,u) -> t<u ? t : u);
+        int min = nums.
+                stream().
+                distinct().
+                reduce(Integer.MAX_VALUE, (t,u) -> t<u ? t : u);
         System.out.println(min);
     }
 
     //minimum 2.yol
     public static void minimum2(List<Integer> nums){
-        int min = nums.stream().distinct().reduce(nums.get(0), (t,u) -> t<u ? t : u);
+        int min = nums.
+                stream().
+                distinct().
+                reduce(nums.get(0), (t,u) -> t<u ? t : u);
         System.out.println(min);
     }
 
     //minimum 3. yol
     public static void minimum3(List<Integer> nums){
-        int min = nums.stream().distinct().sorted().reduce((t,u) -> t).get();
+        int min = nums.
+                stream().
+                distinct().
+                sorted().
+                reduce((t,u) -> t).get();
         System.out.println(min);
     }
 
     public static void minimum4(List<Integer> nums){
-        int min = nums.stream().distinct().reduce(Math::min).get();
+        int min = nums.
+                stream().
+                distinct().
+                reduce(Math::min).get();
+        System.out.println(min);
+    }
+
+    public static void minimum5(List<Integer> nums){
+        Integer min = nums.
+                    stream().
+                    reduce((t,u) ->t>u ? u : t).get();
         System.out.println(min);
     }
 }

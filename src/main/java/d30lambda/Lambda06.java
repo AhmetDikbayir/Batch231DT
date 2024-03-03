@@ -13,7 +13,8 @@ public class Lambda06 {
         //maksimum3(nums);
         //maksimum4(nums);
         //minimum1(nums);
-        minimum2(nums);
+        //minimum2(nums);
+        minimum3(nums);
 
     }
 
@@ -63,6 +64,12 @@ public class Lambda06 {
     //minimum 2.yol
     public static void minimum2(List<Integer> nums){
         int min = nums.stream().distinct().reduce(nums.get(0), (t,u) -> t<u ? t : u);
+        System.out.println(min);
+    }
+
+    //minimum 3. yol
+    public static void minimum3(List<Integer> nums){
+        int min = nums.stream().distinct().sorted().reduce(nums.get(0), (t,u) -> t<u ? t : u);
         System.out.println(min);
     }
 }

@@ -55,7 +55,11 @@ public class Lambda09 {
     // Bu işlem, bir stream'de işlenmiş olan elemanları bir listeye toplar.
 
     public static  List<String> bestenCokBuyuk(List<String> myList){
-        return myList.stream().filter(t->t.length()>5).map(String::toUpperCase).collect(Collectors.toList());
+        return myList.
+                stream().
+                filter(t->t.length()>5).
+                map(String::toUpperCase).
+                collect(Collectors.toList());
 
     }
 

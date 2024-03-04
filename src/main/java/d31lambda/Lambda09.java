@@ -61,6 +61,7 @@ public class Lambda09 {
     //ornek 12: Bir List'teki karakter sayisi 5’den az olan tum elemanlari tekrarsiz olarak kucuk harflerle
     // natural order da console'a yazdiran method'u olusturunuz.
 
+
     public static void bestenAzKucuk(List<String> myList) {
         myList.
                 stream().

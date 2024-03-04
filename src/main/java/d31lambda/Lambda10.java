@@ -16,11 +16,14 @@ public class Lambda10 {
         //removeIfLengthGreaterThanFive(myList);
         //removeIfElementsStartsWithZorEndsWithf(myList);
         //removeIfElementsStartsWithZorEndsWithf2(myList);
-        removeIfElementsContainsX(myList);
+        //removeIfElementsContainsX(myList);
+
+
 
     } //main disi
 
     //1) Karakter sayisi 5'ten fazla olan elemanları silen bir method oluşturun.
+
 
     //removeIf() metodu, koleksiyonlardaki (özellikle List, Set gibi) elemanları belirli bir koşula göre
     // kaldırmak için kullanılır.removeIf metodu Collection arayüzünde tanımlıdır,

@@ -19,7 +19,7 @@ public class Deneme {
     }
 
     public static void eHaric(List<String> myList){
-        myList.stream().filter(t->!t.toLowerCase().startsWith("e")).forEach(t-> System.out.println(t));
+        myList.stream().distinct().map(String::toUpperCase).sorted().forEach(t-> System.out.print(t + " "));
     }
 
 

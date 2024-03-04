@@ -1,5 +1,7 @@
 package d31lambda;
 
+import jdk.jshell.execution.Util;
+
 import java.util.stream.IntStream;
 
 public class Lambda11 {
@@ -82,6 +84,6 @@ public class Lambda11 {
             a = b;
             b = temp;
         }
-        return IntStream.range(a + 1, b).filter(t->t%2==0).sum();
+        return IntStream.range(a + 1, b).filter(Utils::isNumberEven).sum();
     }
 }

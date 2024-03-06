@@ -74,23 +74,30 @@ public class Maps02 {
         boolean cki = stdAges.containsKey("Tom".toLowerCase());
         System.out.println(cki);
 
-        Set<Map.Entry<String, Integer>> stdAgesSet = stdAges.entrySet();
-        for(Map.Entry<String, Integer> w : stdAgesSet){
-            w.getKey().toUpperCase();
-            System.out.println(w);
+        System.out.println(stdNames);
+
+        //Ali entry si büyük küçük harf duyarlılığı ortadan kaldırılarak silmeye yarayan kod
+
+        Set<Map.Entry<String, Integer>> stdNamesSet = stdNames.entrySet();
+        for(Map.Entry<String, Integer> w : stdNamesSet){
+            if(w.getKey().trim().equalsIgnoreCase("aLi")){
+                stdNames.remove(w.getKey());
+            }
         }
+
+        System.out.println(stdNames);
 
 
 
         //------------------------------------
 
         //6)remove(“Tom”); methodu key kullanarak entry silmeye yarar
-        stdNames.remove("Tom"); // Mapde değer küçük harf olursa silmez.
-        System.out.println(stdNames);
-
-        //remove(“Can”,19); methodu hem key hemde value’yu kontrol eder eslesirse siler yoksa silmez
-        System.out.println(stdNames.remove("Can", 18)); //Doğrudan yazdırınca false veriyor.
-        System.out.println(stdNames);//{Can=19, Ahmet=41, Veli=63, Ayse=23, Ali=18}
+//        stdNames.remove("Tom"); // Mapde değer küçük harf olursa silmez.
+//        System.out.println(stdNames);
+//
+//        //remove(“Can”,19); methodu hem key hemde value’yu kontrol eder eslesirse siler yoksa silmez
+//        System.out.println(stdNames.remove("Can", 18)); //Doğrudan yazdırınca false veriyor.
+//        System.out.println(stdNames);//{Can=19, Ahmet=41, Veli=63, Ayse=23, Ali=18}
         // Can silinmez, value'su 19 olsaydi silinirdi
 
     }

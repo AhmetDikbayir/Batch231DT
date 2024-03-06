@@ -17,6 +17,7 @@ public class Maps01 {
         //1) HashMap: Key-value çiftlerini rastgele bir sırayla depolayan bir Map türüdür.En hizlisidir.
         HashMap<String, Integer> myMap = new HashMap<>();
 
+
         //put():Bir key-value çiftini map’e ekler.
         myMap.put("Ali Can", 12);
         myMap.put("Veli Han", 18);
@@ -38,6 +39,11 @@ public class Maps01 {
         //values():Map’teki tüm value’ların bir collection’ını döndürür.Collection’ın sırası rastgeledir.
 
         Collection<Integer> valueTarafi = myMap.values(); //ODEV: Collection yerine List turu yazilabilir mi?
+        List<Integer> valTarafi = new ArrayList<>(myMap.values());
+
+        System.out.println("--------------");
+        System.out.println(valTarafi);
+        System.out.println("--------------");
 
         System.out.println(valueTarafi);
 
@@ -65,11 +71,19 @@ public class Maps01 {
         System.out.println(myMap); //{Ali Can=25, Ayşe Kaya=15, Veli Han=18, Fatma Kaya=19}
 
         Set<Map.Entry<String, Integer>> myEntrySet = myMap.entrySet();
-        System.out.println(myEntrySet);
+        System.out.println("myEntry Set : " +myEntrySet);
 
         for(Map.Entry<String, Integer> w : myEntrySet){
             System.out.println(w);
         }
+
+        int sum3 = 0;
+
+        Set<Map.Entry<String, Integer>> myEntrySet2 = myMap.entrySet();
+        for(Map.Entry<String, Integer> w : myEntrySet2){
+            sum3 += w.getKey().length() + w.getValue();
+        }
+        System.out.println("sum3 = " + sum3);
 
         System.out.println("-----------------------------");
         //Ornek 2: Verilen Map’deki kisi isimlerinin character sayisi ile yaslarinin toplamini bulunuz.

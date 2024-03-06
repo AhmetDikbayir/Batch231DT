@@ -52,7 +52,7 @@ public class Maps02 {
 
         //Kullanıcının oturum açıp açmadığını bunula kontrol edebilirsiniz.
         System.out.println(stdNames.get("Jerry"));//null
-        System.out.println(stdNames.getOrDefault("Jerry", 18));//Jerry olmadığı için 18 getirdi.
+        System.out.println(stdNames.getOrDefault("Jerry", -1));//Jerry olmadığı için 18 getirdi.
 
         //5)containsKey() metodu, Map’te bir key olup olmadığını kontrol eder.
         //containsValue() metodu ise, Map’te bir value olup olmadığını kontrol eder.

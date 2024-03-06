@@ -36,22 +36,22 @@ public class Deneme {
 
         String s = "Ali nasıl.sın geldi, nasılsın Ali.";
 
-        String[] sArr = s.replaceAll("\\p{Punct}", "").toLowerCase().split(" ");
-        System.out.println(Arrays.toString(sArr));
-        HashMap<String, Integer> myMap = new HashMap<>();
+       String[] strArr = s.replaceAll("\\p{Punct}", "").toLowerCase().split(" ");
+
+       HashMap<String, Integer> myMap = new HashMap<>();
 
 
-        for(String w : sArr){
-            Integer gorunum = myMap.get(w);
-            if(gorunum == null){
-                myMap.put(w,1);
-            }else {
-                myMap.put(w, gorunum+1);
-            }
-        }
+
+       for(String w : strArr){
+           Integer occurance = myMap.get(w);
+           if(occurance == null){
+               myMap.put(w,1);
+           }else {
+               myMap.put(w, occurance+1);
+           }
+       }
 
         System.out.println(myMap);
-
 
     }
 }

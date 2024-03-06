@@ -1,9 +1,6 @@
 package d25maps;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class Deneme {
     public static void main(String[] args) {
@@ -16,15 +13,6 @@ public class Deneme {
         stdNames.put("Ahmet", 41);
         stdNames.put("Jerry", 14);
 
-//        Set<Map.Entry<String, Integer>> stdNamesSet = stdNames.entrySet();
-//        for(Map.Entry<String, Integer> w: stdNamesSet){
-//            if(w.getKey().trim().equalsIgnoreCase("aLi")){
-//                stdNames.remove(w.getKey());
-//            }
-//        }
-//
-//        stdNames.remove("ahmet");
-//        System.out.println(stdNames);
 
         //meshur bir interview sorusu
         //ornek 1: Size verilen bir String'deki her kelimenin, o String'de kac defa kullanildigini
@@ -36,22 +24,38 @@ public class Deneme {
 
         String s = "Ali nasıl.sın geldi, nasılsın Ali.";
 
-       String[] strArr = s.replaceAll("\\p{Punct}", "").toLowerCase().split(" ");
+        List<String> myList = new ArrayList<>();
+        myList.add("Ali");
+        myList.add("Tom");
+        myList.add("Jim");
+        myList.add("Clara");
+        myList.add("Fatma");
+        myList.add("Tom");
 
-       HashMap<String, Integer> myMap = new HashMap<>();
+        Iterator<String> myItr = myList.iterator();
 
+        while(myItr.hasNext()){
+            String w = myItr.next();
+            if(w.equalsIgnoreCase("tom")){
+                myItr.remove();
+            }
+        }
 
+//        System.out.println(myList);
 
-       for(String w : strArr){
-           Integer occurance = myMap.get(w);
-           if(occurance == null){
-               myMap.put(w,1);
-           }else {
-               myMap.put(w, occurance+1);
-           }
-       }
+        List<String> yourList = new ArrayList<>(Arrays.asList("Ali", "Can", "Aliye"));
+        System.out.println(yourList);
 
-        System.out.println(myMap);
+        ListIterator<String> yourListItr = yourList.listIterator();
 
+        while (yourListItr.hasNext()){
+            String str2 = yourListItr.next();
+            if(str2.equalsIgnoreCase("can")){
+                yourListItr.set(str2 + " *");
+            }
+
+        }
+
+        System.out.println(yourList);
     }
 }

@@ -13,6 +13,19 @@ public class Deneme {
         stdNames.put("Ahmet", 41);
         stdNames.put("Jerry", 14);
 
+        System.out.println(stdNames);
+
+        Set<Map.Entry<String, Integer>> myMapEntry = stdNames.entrySet();
+        System.out.println(myMapEntry);
+
+        int sum = 0;
+        for (Map.Entry<String, Integer> w : myMapEntry){
+            if(w.getKey().length()>3){
+                sum += w.getValue();
+            }
+        }
+        System.out.println(sum);
+
 
         //meshur bir interview sorusu
         //ornek 1: Size verilen bir String'deki her kelimenin, o String'de kac defa kullanildigini
@@ -22,40 +35,25 @@ public class Deneme {
 
         //ali=2, nasilsin=1 ==> Bu map yapisi
 
-        String s = "Ali nasıl.sın geldi, nasılsın Ali.";
-
-        List<String> myList = new ArrayList<>();
-        myList.add("Ali");
-        myList.add("Tom");
-        myList.add("Jim");
-        myList.add("Clara");
-        myList.add("Fatma");
-        myList.add("Tom");
-
-        Iterator<String> myItr = myList.iterator();
-
-        while(myItr.hasNext()){
-            String w = myItr.next();
-            if(w.equalsIgnoreCase("tom")){
-                myItr.remove();
-            }
-        }
-
+//        String s = "Ali nasıl.sın geldi, nasılsın Ali.";
+//
+//        List<String> myList = new ArrayList<>();
+//        myList.add("Ali");
+//        myList.add("Tom");
+//        myList.add("Jim");
+//        myList.add("Clara");
+//        myList.add("Fatma");
+//        myList.add("Tom");
 //        System.out.println(myList);
-
-        List<String> yourList = new ArrayList<>(Arrays.asList("Ali", "Can", "Aliye"));
-        System.out.println(yourList);
-
-        ListIterator<String> yourListItr = yourList.listIterator();
-
-        while (yourListItr.hasNext()){
-            String str2 = yourListItr.next();
-            if(str2.equalsIgnoreCase("can")){
-                yourListItr.set(str2 + " *");
-            }
-
-        }
-
-        System.out.println(yourList);
+//
+//        ListIterator<String> listItr = myList.listIterator();
+//
+//        while(listItr.hasNext()){
+//            listItr.next();
+//        }
+//        while (listItr.hasPrevious()){
+//            String st2 = listItr.previous();
+//            System.out.print(st2 + "<--");
+//        }
     }
 }

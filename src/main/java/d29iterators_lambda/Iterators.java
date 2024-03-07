@@ -32,7 +32,7 @@ public class Iterators {
         //elemanlari sondan basa dogru yazdirin
         while(listItr2.hasPrevious()){//öncesinde eleman var mı diye bakar
             String el = (String) listItr2.previous(); //previous() pointer ' i sagdan sola alir
-            System.out.println(el + "<--");
+            System.out.print(el + "<--");
         }
 
 //        List<String> yourList2 = new ArrayList<>(Arrays.asList("Ali", "Can", "Aliye"));

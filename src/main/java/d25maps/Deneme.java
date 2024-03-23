@@ -81,25 +81,6 @@ public class Deneme {
 //        System.out.println(str);
 //        System.out.println(arrStr);
 //        System.out.println(strList);
-        int[] nums2 = {555,90,48254,17723};
-        System.out.println(Arrays.toString(nums2));
-        int counter = 0;
-        int res = 0;
-        for( int num : nums2) {
-            if (num != 0) {
-                counter++;
-                num /= 10;
-            } else {
-                if (counter % 2 == 0) {
-                    System.out.println("even");
-                    res++;
-                } else {
-                    System.out.println("odd");
-                }
-            }
-        }
-
-
 
     }
 }

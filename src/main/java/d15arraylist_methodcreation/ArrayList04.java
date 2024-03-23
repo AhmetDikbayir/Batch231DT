@@ -28,6 +28,7 @@ public class ArrayList04 {
         r.add("Edirne");
         System.out.println(r); //[Manisa, Nigde, Tokat, Van]
 
+
 /*        for (String w : r){ //4 defa calisacak
             if (w.contains("a")){
                 r.remove(w);

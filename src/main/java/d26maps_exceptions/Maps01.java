@@ -115,13 +115,14 @@ public class Maps01 {
             //Can -> 18
             //Mehmet -> 30
             //insertion order
-
-
         }
         //ConcurrentHashMap Java'nın java.util.concurrent paketinde yer alan thread-safe bir Map cesididir.
         // ConcurrentHashMap, eş zamanlı okuma ve yazma işlemlerini destekler ve Hashtable gibi senkronize
         // edilmiş koleksiyonlara göre daha yüksek performans sunar.
 
         ConcurrentHashMap<String,Integer> s = new ConcurrentHashMap<>();
+        s.put("Elma", 10);
+        s.put("Muz", 20);
+        System.out.println(s);
     }
 }

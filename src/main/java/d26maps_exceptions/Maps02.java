@@ -10,13 +10,13 @@ public class Maps02 {
         HashMap<String, String> capitals = new HashMap<>();
 
         capitals.put("USA", "Washington");
-        capitals.get("USA");
+        System.out.println(capitals.get("USA"));
         capitals.put("Italy", "Rome");
         capitals.put("Turkiye", "Ankara");
-        capitals.get("Turkiye");
+        System.out.println(capitals.get("Turkiye"));
 
         capitals.put("Turkiye", "Istanbul");
-        capitals.get("Turkiye");
+        System.out.println(capitals.get("Turkiye"));
 
     }
 }

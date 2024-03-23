@@ -13,6 +13,8 @@ public class ArrayList02 {
         list.add(12);
         list.add(9);
         list.add(3);
+
+
 //        System.out.println(list); //[23, 24, 12, 9, 3]
 //
 //        //indexOf(Object o) metodu, belirli bir öğenin ArrayList içerisindeki ilk görüldüğü indeksini döndürmek
@@ -39,11 +41,8 @@ public class ArrayList02 {
 
         LinkedList<Integer> reverseList = new LinkedList<>();
 
-        int index = 0;
-
         for(Integer w : myList){
             reverseList.add(0, w);
-            index++;
         }
         System.out.println(reverseList);
     }

@@ -13,10 +13,10 @@ public class Deneme {
         stdNames.put("Ahmet", 41);
         stdNames.put("Jerry", 14);
 
-        System.out.println(stdNames);
+        //System.out.println(stdNames);
 
         Set<Map.Entry<String, Integer>> myMapEntry = stdNames.entrySet();
-        System.out.println(myMapEntry);
+        //System.out.println(myMapEntry);
 
         int sum = 0;
         for (Map.Entry<String, Integer> w : myMapEntry){
@@ -24,7 +24,7 @@ public class Deneme {
                 sum += w.getValue();
             }
         }
-        System.out.println(sum);
+        //System.out.println(sum);
 
 
         //meshur bir interview sorusu
@@ -55,5 +55,51 @@ public class Deneme {
 //            String st2 = listItr.previous();
 //            System.out.print(st2 + "<--");
 //        }
+
+        ArrayList<Integer> nums = new ArrayList<>();
+        nums.add(2);
+        nums.add(25);
+        nums.add(24);
+        nums.add(20);
+        nums.add(42);
+//        System.out.println(nums);
+//        Integer a = nums.set(1, 15);
+//        System.out.println(a);
+//        System.out.println(nums);
+//        System.out.println(a+a);
+
+        String str = "Java güzel java ogren";
+
+        String [] arrStr = str.replaceAll(" ", "").split("");
+        ArrayList<String> strList = new ArrayList<>();
+
+        for(int i = 0; i< arrStr.length; i++){
+            if(!strList.contains(arrStr[i])){
+                strList.add(arrStr[i]);
+            }
+        }
+//        System.out.println(str);
+//        System.out.println(arrStr);
+//        System.out.println(strList);
+        int[] nums2 = {555,90,48254,17723};
+        System.out.println(Arrays.toString(nums2));
+        int counter = 0;
+        int res = 0;
+        for( int num : nums2) {
+            if (num != 0) {
+                counter++;
+                num /= 10;
+            } else {
+                if (counter % 2 == 0) {
+                    System.out.println("even");
+                    res++;
+                } else {
+                    System.out.println("odd");
+                }
+            }
+        }
+
+
+
     }
 }

@@ -1,12 +1,13 @@
 package d15arraylist_methodcreation;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Algorithms {
     public static void main(String[] args) {
 
         //Find the even digit of numbers in array
-        int[] nums = {555,90,48254,17723};
+        /*int[] nums = {555,90,48254,17723};
         //System.out.println(Arrays.toString(nums));
         int counter = 0;
         int res = 0;
@@ -39,5 +40,22 @@ public class Algorithms {
         }
         Arrays.sort(newArr);
         System.out.println(Arrays.toString(newArr));
+*/
+        //Return the unique number in the list
+        int[] nums = {0,0,1,1,1,2,2,3,3,4};
+        int k = 1;
+        ArrayList<Integer> list = new ArrayList<>();
+        for(int w : nums){
+            list.add(w);
+        }
+        System.out.println(list);
+        ArrayList<Integer> newList = new ArrayList<>();
+        for(Integer w : list){
+            if(!newList.contains(w)){
+                newList.add(w);
+            }
+        }
+        System.out.println(newList);
+
     }
 }
